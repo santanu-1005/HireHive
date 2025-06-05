@@ -18,7 +18,8 @@ app.use(cookieParser());
 
 const url = process.env.FRONTEND_URL
 const corsOptions = {
-  origin: [url],
+  origin: [url], // or just origin: url,
+  methods: ['GET', 'POST', 'OPTIONS'],
   credentials: true,
 };
 
