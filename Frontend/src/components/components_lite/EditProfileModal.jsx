@@ -23,7 +23,7 @@ const EditProfileModal = ({ open, setOpen }) => {
     fullname: user?.fullname || "",
     email: user?.email || "",
     phoneNumber: user?.phoneNumber || "",
-    bio: user?.profile?.bio || "NA",
+    bio: user?.profile?.bio ,
     skills: user?.profile?.skills?.join(", ") || "",
     file: null,
   });

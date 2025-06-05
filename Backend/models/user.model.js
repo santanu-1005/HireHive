@@ -12,24 +12,23 @@ const userSchema = new mongoose.Schema(
     },
     phoneNumber: {
       type: String,
-      required: true,
+      default: "",
       unique: true,
-      default: null,
     },
     password: {
       type: String,
       required: true,
     },
-    pancard: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    adharcard: {
-      type: String,
-      required: true,
-      unique: true,
-    },
+    // pancard: {
+    //   type: String,
+    //   required: true,
+    //   unique: true,
+    // },
+    // adharcard: {
+    //   type: String,
+    //   required: true,
+    //   unique: true,
+    // },
     role: {
       type: String,
       enum: ["Student", "Recruiter"],
@@ -39,6 +38,7 @@ const userSchema = new mongoose.Schema(
     profile: {
       bio: {
         type: String,
+        default: "",
       },
       skills: [{ type: String }],
       resume: {

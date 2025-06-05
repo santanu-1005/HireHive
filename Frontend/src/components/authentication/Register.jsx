@@ -40,10 +40,10 @@ const Register = () => {
     formData.append("fullname", input.fullname);
     formData.append("email", input.email);
     formData.append("password", input.password);
-    formData.append("pancard", input.pancard);
-    formData.append("adharcard", input.adharcard);
+    // formData.append("pancard", input.pancard);
+    // formData.append("adharcard", input.adharcard);
     formData.append("role", input.role);
-    formData.append("phoneNumber", input.phoneNumber);
+    // formData.append("phoneNumber", input.phoneNumber);
     if (input.file) {
       formData.append("file", input.file);
     }

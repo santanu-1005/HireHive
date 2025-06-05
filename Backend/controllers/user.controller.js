@@ -6,7 +6,7 @@ import cloudinary from "../utils/cloud.js";
 
 export const register = async (req, res) => {
   try {
-    const { fullname, email, phoneNumber, password, adharcard, pancard, role } = req.body;
+    const { fullname, email, phoneNumber, password, role } = req.body;
 
     if (!fullname || !email || !password || !role ) {
       return res.status(400).json({
@@ -23,21 +23,21 @@ export const register = async (req, res) => {
       });
     }
 
-    const existingAdharcard = await User.findOne({ adharcard });
-    if (existingAdharcard) {
-      return res.status(400).json({
-        message: "Adhar number already exists",
-        success: false,
-      });
-    }
+    // const existingAdharcard = await User.findOne({ adharcard });
+    // if (existingAdharcard) {
+    //   return res.status(400).json({
+    //     message: "Adhar number already exists",
+    //     success: false,
+    //   });
+    // }
 
-    const existingPancard = await User.findOne({ pancard });
-    if (existingPancard) {
-      return res.status(400).json({
-        message: "Pan number already exists",
-        success: false,
-      });
-    }
+    // const existingPancard = await User.findOne({ pancard });
+    // if (existingPancard) {
+    //   return res.status(400).json({
+    //     message: "Pan number already exists",
+    //     success: false,
+    //   });
+    // }
 
     const file = req.file;
     if (!file) {
@@ -55,8 +55,8 @@ export const register = async (req, res) => {
       fullname,
       email,
       phoneNumber,
-      adharcard,
-      pancard,
+      // adharcard,
+      // pancard,
       password: hashedPassword,
       role,
       profile: {
