@@ -23,7 +23,7 @@ const corsOptions = {
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
 };
-
+console.log("Allowed Url:". url)
 app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 5001;

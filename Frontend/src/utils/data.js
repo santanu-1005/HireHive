@@ -1,8 +1,8 @@
-const BASE_API_URL = import.meta.env.VITE_API_URL;
+    const BASE_API_URL = "https://hire-hive-backend.vercel.app/";
 
-export const USER_API_ENDPOINT = `${BASE_API_URL}/user`;
-export const JOB_API_ENDPOINT = `${BASE_API_URL}/job`;
-export const APPLICATION_API_ENDPOINT = `${BASE_API_URL}/application`;
-export const COMPANY_API_ENDPOINT = `${BASE_API_URL}/company`;
+    export const USER_API_ENDPOINT = "https://hire-hive-backend.vercel.app/user";
+    export const JOB_API_ENDPOINT = "https://hire-hive-backend.vercel.app/job"
+    export const APPLICATION_API_ENDPOINT = "https://hire-hive-backend.vercel.app/application";
+    export const COMPANY_API_ENDPOINT = "https://hire-hive-backend.vercel.app/company";
 
-console.log(import.meta.env)
+    // console.log(USER_API_ENDPOINT);
